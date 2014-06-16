@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>BBTヘルスケア</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="screen" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./info.html">BBTヘルスケア</a>
+      </div>
+  
+      <div class="collapse navbar-collapse target">
+        <ul class="nav navbar-nav">
+          <li ><a href="./health-graph.html">分析</a></li>
+          <li><a href="./health-form.html">入力</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" style="margin-right:10px;">
+          <li  class="dropdown open">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">
+				麹町太郎<b class="caret"></b></a>
+          	<ul class="dropdown-menu">
+                <li  class="active"><a href="./settings.html">設定変更</a></li>
+                <li><a href="./help.html">ヘルプ</a></li>
+                <li class="divider"></li>
+                <li><a href="./login.html">ログアウト</a></li>
+         	</ul>
+          </li>
+        </ul>
+      </div>
+      
+    </nav>    
+    <div class="container" style="padding:20px 0">
+      <form class="form-horizontal" style="margin-top:50px;margin-bottom:15px;margin-left:15px;margin-right:15px;">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="name">氏名</label>
+          <div class="col-sm-4">
+            <input type="text" id="name" class="form-control" value="麹町太郎" placeholder="氏名">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Email</label>
+          <div class="col-sm-4">
+            <input type="text" id="email" class="form-control" value="12345667890@1234.com" placeholder="メールアドレス">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="password">パスワード</label>
+          <div class="col-sm-4">
+            <input type="password" id="password" class="form-control" value="" >
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="serial">シリアル番号</label>
+          <div class="col-sm-4">
+            <input type="text" id="serial" class="form-control" value="12345667890" 
+            placeholder="製品のシリアル番号を記入してください">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="date">生年月日</label>
+            <div class="col-sm-4  date" >
+                <input type="text" class="form-control" id="datetimepicker1" placeholder="yyyy/mm/dd"/>
+                <!--<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                </span> -->
+            </div>
+        </div>
+	   <div class="form-group">
+          	<label class="control-label col-sm-2" for="sex">性別</label>
+	   		<div class="col-sm-4">
+		        <label class="radio-inline">
+	            	<input type="radio" name="sex" value="male" checked="checked">男性</label>
+	        	<label class="radio-inline">
+	    	        <input type="radio"  name="sex" value="female">女性</label>
+    	    </div>
+ 	   </div>
+ 	   <div class="form-group" >
+          	<label class="control-label col-sm-2" for="photo" >ユーザ画像</label>
+	   		<div class="controls col-sm-4">
+               <img src="./images/photo.png" class="img-thumbnail"
+ 	                  style="display:inline-block;float:none;vertical-align:middle;width:80px;margin-right:20px;">
+ 	                  <input type="file"  id="photo" name="upfile" title=" ファイルを選択" />
+             </div>
+ 	   </div>
+        <div class="form-action">
+          <div class="col-sm-offset-2 col-sm-4">
+            <input type="submit" value="登録" class="btn btn-primary">
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/locales/bootstrap-datepicker.ja.js"></script>
+    <script type="text/javascript">
+	        $(function () {
+	            $('#datetimepicker1').datepicker({
+	             format: 'yyyy/mm/dd',
+		        language: 'ja',
+		        autoclose:'true'
+		        });
+	        });
+    </script>
+    <script src="js/bootstrap.file-input.js"></script>
+    <script type="text/javascript">
+			$('input[type=file]').bootstrapFileInput();
+			$('.file-inputs').bootstrapFileInput();
+    </script>
+
+  </body>
+</html>
