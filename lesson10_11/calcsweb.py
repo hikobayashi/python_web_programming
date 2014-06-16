@@ -30,7 +30,7 @@ def signup():
 
 @route('/welcome.html','GET')
 @route('/welcome.html','POST')
-def signup():
+def welcome():
 	return template('./welcome.html')
 
 
